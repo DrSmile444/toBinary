@@ -25,8 +25,8 @@ h1 {
 
 button {
   font-weight: bold;
-  border: 0;
   margin: 20px 10px;
+  border: 0;  
 }
 
 .btn-int {
