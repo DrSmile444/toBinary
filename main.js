@@ -1,9 +1,13 @@
-'use strict';
+'use strict'; let p = console.log;
 
 let output = document.getElementById('output');
 
-function start() {
-  toBinary( +prompt('Pick number:','') );
+function start(key) {
+  if (key) {
+    toDecimal( prompt('Pick number: (binary)','') )
+  } else {
+    toBinary( +prompt('Pick number:','') );
+  }
 }
 
 function toBinary(num) {
@@ -35,13 +39,29 @@ function toBinary(num) {
   return 0;
 }
 
+function toDecimal(num) {
+  outputDefault();
+  let process = (num + '').split('').reverse();
+  let result = 0, arr = [];
+
+  for (let i = 0, n = process.length; i < n; i++) {
+    if (+process[i]) {
+      let chache = Math.pow(2, i);
+      result += chache;
+      arr.push(chache)
+    }
+  }
+
+  return output.value = num + ' =\n' + arr.reverse().join(' + ') + '\nResult is:   \n' + result;
+}
+
 function outputDefault() {
   output.value = '';
   output.style.height = '200px';
 }
 
 function about() {
-  let info = '   The program helps understand the principle of obtaining a binary number.';
+  let info = '   The program helps understand the principle of obtaining a binary number.\nAnyway, you can obtain a decimal number.';
   
   alert(info);
 }
