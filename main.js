@@ -1,4 +1,4 @@
-'use strict'; let p = console.log;
+'use strict';
 
 let output = document.getElementById('output');
 
