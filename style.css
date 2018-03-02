@@ -1,3 +1,7 @@
+* {
+  transition: all .3s;
+}
+
 body {
   color: aquamarine;
   background: black;
@@ -21,23 +25,36 @@ h1 {
   resize: none;
   text-align: right;
   font-size: 16px;
+  outline-color: yellow;
 }
 
 button {
   font-weight: bold;
   border: 0;
-  margin: 20px 10px;
+  margin: 0px 10px 12px 0px;
 }
 
 .btn-int {
   background: aquamarine;
   width: 100px;
   height: 40px;
+  outline-color: rgb(255, 115, 0);
 }
 
 .btn-int:hover {
   background: rgb(104, 211, 175);
   cursor: pointer;
+}
+
+.buttons-minus .btn-int {
+  background: black;
+  color: rgb(104, 211, 175);
+  border: 1px solid rgb(104, 211, 175);
+  outline-color: red;
+}
+
+.buttons-minus .btn-int:hover {
+  background: rgb(19, 41, 34);
 }
 
 .btn-help {
