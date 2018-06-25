@@ -1,23 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>To Binary</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="shortcut icon" href="drsmileico.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>To Binary</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="drsmileico.ico" type="image/x-icon">
 </head>
-<body style='background:black'>
-	<h1>To Binary</h1>
-	<div class="buttons">
-		<button class='btn-int' onclick='start()' autofocus>Process</button>
-		<button class="btn-int" onclick="start('true')">To Decimal</button>
-	</div>
-	<div class="buttons-minus">
-		<button class="btn-int" onclick='start(false, true)'>Minus Sys</button>
-		<button class="btn-int" onclick='start(true, true)'>To Decimal</button>
-	</div>
-	<textarea id='output' placeholder='Output'></textarea>
-	<script src='main.js'></script> <br>
-	<button class='btn-help' onclick='about()'>About</button>
+
+<body>
+  <main>
+    <h1>To Binary</h1>
+    <div class="buttons">
+      <button onclick='start("binary")' autofocus>Process</button>
+      <button onclick='start("decimal")'>To Decimal</button>
+      <button onclick='start("binary", true)' class='btn-invert'>Minus Sys</button>
+      <button onclick='start("decimal", true)' class='btn-invert'>To Decimal</button>
+    </div>
+    <textarea id="output" placeholder="Output"></textarea>
+    <button onclick='about()' class='btn-help'>About</button>
+  </main>
+
+  <script src="main.js"></script>
 </body>
+
 </html>
